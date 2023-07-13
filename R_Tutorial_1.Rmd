@@ -1,0 +1,85 @@
+---
+title: "R Tutorial 1"
+author: "Lipin Guo"
+date: "2023-07-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Analysis Process
+
+1.   Importing data
+2.   Pre-processing data
+3.   Selecting features from data
+4.   Modeling and representing data
+
+## Data type
+![data type](./data-types-in-R.jpg)
+Figure 1: Data Types in R (from techvidvan.com)
+
+## Data Structures/Objects
+### Functions
+#### print()
+
+```{r}
+# print a string with quotation marks
+print("Hello World")
+```
+```{r}
+# print a string without quotation marks
+print("Hello World", quote = FALSE)
+```
+### Variables
+#### class()/typeof()
+Variables are used to store data. We can use class() / type() function to check data type.
+```{r}
+# Declaring a variable using '<-' or '='
+# Variables of different types
+
+# Logical
+boolean1 <- TRUE
+boolean2 = FALSE
+print(class(boolean1))
+print(class(boolean2))
+
+# Numeric
+real_numeric <- 8
+decimal_numeric = 1.22
+print(class(real_numeric))
+print(class(decimal_numeric))
+
+# Integer
+integer1 <- 8L
+print(class(integer1))
+
+# Complex
+complex1 <- 5+7i
+print(class(complex1))
+
+# Character
+character1 <- "True"
+character2 = "world"
+print(typeof(character1))
+print(typeof(character2))
+```
+#### length()
+```{r}
+integer2 <- 1:5
+length(integer2)
+character3 <- "Hello world"
+length(character3)
+```
+#### ls()
+Use ls() to check all the created variables.
+```{r}
+ls()
+```
+#### rm()
+delete a specific variable
+```{r}
+rm(character3)
+ls()
+```
